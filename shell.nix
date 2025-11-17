@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:pkgs.mkShell {
+{ pkgs ? import <nixpkgs> { config.allowUnfree = true; } }:pkgs.mkShell {
   packages = with pkgs; [
     gum
     gh
